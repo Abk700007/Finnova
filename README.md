@@ -18,7 +18,7 @@ Track income & expenses, scan receipts with AI, visualize trends, and manage mul
 
 <br />
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Finnova-7c3aed?style=for-the-badge&logo=vercel)](https://finnova-wheat.vercel.app/))
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Finnova-7c3aed?style=for-the-badge&logo=vercel)](https://finnova-wheat.vercel.app/)
 [![GitHub Stars](https://img.shields.io/github/stars/Abk700007/Finnova?style=for-the-badge&color=7c3aed)](https://github.com/Abk700007/Finnova/stargazers)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
