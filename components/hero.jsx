@@ -32,10 +32,14 @@ const HeroSection = () => {
       <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-blue-600/8 rounded-full blur-[100px] -z-10" />
 
       <div className="container mx-auto text-center relative z-10">
-        {/* Eyebrow tag */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-violet-500/20 bg-violet-500/10 mb-8 animate-fade-in-up">
-          <Sparkles className="w-3.5 h-3.5 text-violet-400" />
-          <span className="text-xs font-semibold text-violet-300 tracking-wide">AI-Powered Finance Platform</span>
+        {/* App Logo/Name tag */}
+        <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in-up">
+          <div className="bg-violet-600 rounded-2xl p-3 flex items-center justify-center shadow-[0_0_40px_rgba(124,58,237,0.4)]">
+            <TrendingUp className="w-8 h-8 text-white" strokeWidth={2.5} />
+          </div>
+          <span className="text-4xl md:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-violet-300 to-blue-300">
+            Finnova
+          </span>
         </div>
 
         {/* Main headline */}
