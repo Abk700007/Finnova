@@ -26,11 +26,9 @@ Track income & expenses, scan receipts with AI, visualize trends, and manage mul
 
 ---
 
-## 📸 Screenshots
-
-| Landing Page | Dashboard |
-|---|---|
-| ![Landing](https://github.com/user-attachments/assets/1bc50b85-b421-4122-8ba4-ae68b2b61432) | ![Dashboard](https://github.com/user-attachments/assets/1bc50b85-b421-4122-8ba4-ae68b2b61432) |
+<div align="center">
+  <img src="./public/landing.png" alt="Finnova Landing Page" width="100%" style="border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.3);" />
+</div>
 
 ---
 
