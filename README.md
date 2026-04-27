@@ -52,6 +52,11 @@ Track income & expenses, scan receipts with AI, visualize trends, and manage mul
 
 ## 🏗️ Architecture
 
+![Finnova Architecture](./public/architecture.png)
+
+<details>
+<summary>📐 View as interactive Mermaid diagram</summary>
+
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor': '#7c3aed', 'primaryTextColor': '#fff', 'primaryBorderColor': '#7c3aed', 'lineColor': '#6366f1', 'sectionBkgColor': '#0f1628', 'altSectionBkgColor': '#111827', 'gridColor': '#1f2937', 'secondaryColor': '#111827', 'tertiaryColor': '#1f2937' }}}%%
 
@@ -116,6 +121,8 @@ graph TB
     style Data fill:#1a1000,stroke:#f59e0b,color:#e2e8f0
     style Email fill:#1a000a,stroke:#ec4899,color:#e2e8f0
 ```
+
+</details>
 
 ---
 
