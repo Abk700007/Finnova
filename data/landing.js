@@ -9,79 +9,71 @@ import {
 
 // Stats Data
 export const statsData = [
-  {
-    value: "50K+",
-    label: "Active Users",
-  },
-  {
-    value: "$2B+",
-    label: "Transactions Tracked",
-  },
-  {
-    value: "99.9%",
-    label: "Uptime",
-  },
-  {
-    value: "4.9/5",
-    label: "User Rating",
-  },
+  { value: "50K+", label: "Active Users" },
+  { value: "$2B+", label: "Transactions Tracked" },
+  { value: "99.9%", label: "Uptime" },
+  { value: "4.9/5", label: "User Rating" },
 ];
 
 // Features Data
 export const featuresData = [
   {
-    icon: <BarChart3 className="h-8 w-8 text-blue-600" />,
+    icon: <BarChart3 className="h-5 w-5 text-violet-400" />,
     title: "Advanced Analytics",
     description:
-      "Get detailed insights into your spending patterns with AI-powered analytics",
+      "Understand your spending patterns with AI-powered analytics, trend detection, and actionable insights.",
   },
   {
-    icon: <Receipt className="h-8 w-8 text-blue-600" />,
+    icon: <Receipt className="h-5 w-5 text-violet-400" />,
     title: "Smart Receipt Scanner",
     description:
-      "Extract data automatically from receipts using advanced AI technology",
+      "Photograph any receipt and AI automatically extracts amount, date, and category in seconds.",
   },
   {
-    icon: <PieChart className="h-8 w-8 text-blue-600" />,
+    icon: <PieChart className="h-5 w-5 text-violet-400" />,
     title: "Budget Planning",
-    description: "Create and manage budgets with intelligent recommendations",
+    description:
+      "Set monthly budgets by category with real-time progress tracking and smart overspend alerts.",
   },
   {
-    icon: <CreditCard className="h-8 w-8 text-blue-600" />,
+    icon: <CreditCard className="h-5 w-5 text-violet-400" />,
     title: "Multi-Account Support",
-    description: "Manage multiple accounts and credit cards in one place",
+    description:
+      "Manage checking, savings, and credit accounts from a single, unified dashboard.",
   },
   {
-    icon: <Globe className="h-8 w-8 text-blue-600" />,
+    icon: <Globe className="h-5 w-5 text-violet-400" />,
     title: "Multi-Currency",
-    description: "Support for multiple currencies with real-time conversion",
+    description:
+      "Track finances across currencies with real-time conversion rates built in.",
   },
   {
-    icon: <Zap className="h-8 w-8 text-blue-600" />,
+    icon: <Zap className="h-5 w-5 text-violet-400" />,
     title: "Automated Insights",
-    description: "Get automated financial insights and recommendations",
+    description:
+      "Receive weekly AI reports on your spending, savings rate, and personalized recommendations.",
   },
 ];
 
 // How It Works Data
 export const howItWorksData = [
   {
-    icon: <CreditCard className="h-8 w-8 text-blue-600" />,
+    icon: <CreditCard className="h-7 w-7" />,
     title: "1. Create Your Account",
     description:
-      "Get started in minutes with our simple and secure sign-up process",
+      "Sign up in under 60 seconds. Add your accounts and set your first monthly budget.",
   },
   {
-    icon: <BarChart3 className="h-8 w-8 text-blue-600" />,
+    icon: <BarChart3 className="h-7 w-7" />,
     title: "2. Track Your Spending",
     description:
-      "Automatically categorize and track your transactions in real-time",
+      "Log transactions manually or scan receipts. AI categorizes everything automatically.",
   },
   {
-    icon: <PieChart className="h-8 w-8 text-blue-600" />,
-    title: "3. Get Insights",
+    icon: <PieChart className="h-7 w-7" />,
+    title: "3. Get Smart Insights",
     description:
-      "Receive AI-powered insights and recommendations to optimize your finances",
+      "Finnova analyzes your data and delivers personalized recommendations to help you save more.",
   },
 ];
 
@@ -92,20 +84,20 @@ export const testimonialsData = [
     role: "Small Business Owner",
     image: "https://randomuser.me/api/portraits/women/75.jpg",
     quote:
-      "Welth has transformed how I manage my business finances. The AI insights have helped me identify cost-saving opportunities I never knew existed.",
+      "Finnova transformed how I manage my business finances. The AI insights helped me find cost-saving opportunities I never knew existed.",
   },
   {
     name: "Michael Chen",
     role: "Freelancer",
     image: "https://randomuser.me/api/portraits/men/75.jpg",
     quote:
-      "The receipt scanning feature saves me hours each month. Now I can focus on my work instead of manual data entry and expense tracking.",
+      "The receipt scanning feature saves me hours each month. I finally have a clear picture of where every dollar goes — without the manual work.",
   },
   {
     name: "Emily Rodriguez",
     role: "Financial Advisor",
     image: "https://randomuser.me/api/portraits/women/74.jpg",
     quote:
-      "I recommend Welth to all my clients. The multi-currency support and detailed analytics make it perfect for international investors.",
+      "I recommend Finnova to all my clients. The multi-currency support and detailed analytics make it perfect for international portfolios.",
   },
 ];
