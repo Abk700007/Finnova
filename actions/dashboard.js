@@ -3,9 +3,9 @@
 import aj from "@/lib/arcjet";
 import { db } from "@/lib/prisma";
 import { request } from "@arcjet/next";
-// auth import removed
 import { revalidatePath } from "next/cache";
 import { checkUser } from "@/lib/checkUser";
+import { clerkClient } from "@clerk/nextjs/server";
 
 const serializeTransaction = (obj) => {
   const serialized = { ...obj };
@@ -130,4 +130,28 @@ export async function getDashboardData() {
   });
 
   return transactions.map(serializeTransaction);
+}
+
+export async function deleteUserAccount() {
+  try {
+    const user = await checkUser();
+    if (!user) throw new Error("Unauthorized");
+
+    const clerkUserId = user.clerkUserId;
+
+    // 1. Delete user from local database
+    // All related tables (accounts, transactions, budgets, reports, forecasts) have onDelete: Cascade.
+    await db.user.delete({
+      where: { id: user.id },
+    });
+
+    // 2. Delete user from Clerk Backend API to remove their authentication profile
+    const client = await clerkClient();
+    await client.users.deleteUser(clerkUserId);
+
+    return { success: true };
+  } catch (error) {
+    console.error("Error in deleteUserAccount:", error);
+    return { success: false, error: error.message };
+  }
 }

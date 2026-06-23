@@ -126,9 +126,11 @@ export function TransactionTable({ transactions }) {
 
   useEffect(() => {
     if (deleted && !deleteLoading) {
-      toast.error("Transactions deleted successfully");
+      toast.success("Transactions deleted successfully");
+      setSelectedIds([]);
+      router.refresh();
     }
-  }, [deleted, deleteLoading]);
+  }, [deleted, deleteLoading, router]);
 
   const handleClearFilters = () => {
     setSearchTerm("");

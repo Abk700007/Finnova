@@ -9,6 +9,7 @@ import { Plus, TrendingUp, TrendingDown, Wallet, PiggyBank } from "lucide-react"
 import { DashboardOverview } from "./_components/transaction-overview";
 import { ForecastSection } from "./_components/forecast-section";
 import { ReportsSection } from "./_components/reports-section";
+import { DangerZone } from "./_components/danger-zone";
 
 export default async function DashboardPage() {
   const [accounts, transactions] = await Promise.all([
@@ -124,6 +125,9 @@ export default async function DashboardPage() {
 
       {/* ── AI Financial Reports ── */}
       <ReportsSection />
+
+      {/* ── Danger Zone (Account Deletion) ── */}
+      <DangerZone />
 
       {/* ── Accounts Section ── */}
       <div>
