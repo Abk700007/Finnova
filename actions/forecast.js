@@ -1,7 +1,7 @@
 "use server";
 
 import { db } from "@/lib/prisma";
-import { auth } from "@clerk/nextjs/server";
+import { checkUser } from "@/lib/checkUser";
 import { revalidatePath } from "next/cache";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
@@ -9,20 +9,15 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 
 export async function generateForecast() {
   try {
-    const { userId } = await auth();
-    if (!userId) throw new Error("Unauthorized");
+    const user = await checkUser();
+    if (!user) throw new Error("Unauthorized");
 
-    const user = await db.user.findUnique({
-      where: { clerkUserId: userId },
-      include: {
-        accounts: true,
-      },
+    const accounts = await db.account.findMany({
+      where: { userId: user.id },
     });
 
-    if (!user) throw new Error("User not found");
-
     // 1. Calculate Current Net Worth (Sum of all account balances)
-    const currentNetWorth = user.accounts.reduce(
+    const currentNetWorth = accounts.reduce(
       (sum, acc) => sum + acc.balance.toNumber(),
       0
     );
@@ -189,14 +184,8 @@ export async function generateForecast() {
 
 export async function getLatestForecast() {
   try {
-    const { userId } = await auth();
-    if (!userId) throw new Error("Unauthorized");
-
-    const user = await db.user.findUnique({
-      where: { clerkUserId: userId },
-    });
-
-    if (!user) throw new Error("User not found");
+    const user = await checkUser();
+    if (!user) throw new Error("Unauthorized");
 
     const forecast = await db.forecast.findFirst({
       where: { userId: user.id },

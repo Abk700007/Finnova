@@ -4,6 +4,8 @@ import { AddTransactionForm } from "../_components/transaction-form";
 import { getTransaction } from "@/actions/transaction";
 import { PenBox, Pencil } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 export default async function AddTransactionPage({ searchParams }) {
   const accounts = await getUserAccounts();
   const resolvedParams = await searchParams;

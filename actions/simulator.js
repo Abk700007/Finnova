@@ -1,21 +1,17 @@
 "use server";
 
 import { db } from "@/lib/prisma";
-import { auth } from "@clerk/nextjs/server";
+import { checkUser } from "@/lib/checkUser";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 
 export async function getSimulatorData() {
   try {
-    const { userId } = await auth();
-    if (!userId) throw new Error("Unauthorized");
+    const user = await checkUser();
+    if (!user) throw new Error("Unauthorized");
 
-    const user = await db.user.findUnique({
-      where: { clerkUserId: userId },
-    });
-
-    if (!user) throw new Error("User not found");
+    
 
     // 1. Fetch user transactions to aggregate by category
     const transactions = await db.transaction.findMany({
@@ -124,8 +120,8 @@ export async function getSimulatorData() {
 
 export async function runSimulation(inputs) {
   try {
-    const { userId } = await auth();
-    if (!userId) throw new Error("Unauthorized");
+    const user = await checkUser();
+    if (!user) throw new Error("Unauthorized");
 
     const { categoryReductions, cancelledSubscriptionIds, customSavingsTarget } = inputs;
 
