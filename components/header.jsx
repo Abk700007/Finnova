@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { PenBox, LayoutDashboard, TrendingUp } from "lucide-react";
+import { PenBox, LayoutDashboard, TrendingUp, Brain, Calculator } from "lucide-react";
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { checkUser } from "@/lib/checkUser";
@@ -51,6 +51,26 @@ const Header = async () => {
               >
                 <LayoutDashboard size={16} />
                 <span className="hidden md:inline">Dashboard</span>
+              </Button>
+            </Link>
+            <Link href="/copilot">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-muted-foreground hover:text-foreground hover:bg-white/[0.06] gap-2 text-sm font-medium transition-all"
+              >
+                <Brain size={16} />
+                <span className="hidden md:inline">AI Copilot</span>
+              </Button>
+            </Link>
+            <Link href="/simulator">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-muted-foreground hover:text-foreground hover:bg-white/[0.06] gap-2 text-sm font-medium transition-all"
+              >
+                <Calculator size={16} />
+                <span className="hidden md:inline">Simulator</span>
               </Button>
             </Link>
             <Link href="/transaction/create">

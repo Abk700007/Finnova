@@ -7,6 +7,8 @@ import { CreateAccountDrawer } from "@/components/create-account-drawer";
 import { BudgetProgress } from "./_components/budget-progress";
 import { Plus, TrendingUp, TrendingDown, Wallet, PiggyBank } from "lucide-react";
 import { DashboardOverview } from "./_components/transaction-overview";
+import { ForecastSection } from "./_components/forecast-section";
+import { ReportsSection } from "./_components/reports-section";
 
 export default async function DashboardPage() {
   const [accounts, transactions] = await Promise.all([
@@ -116,6 +118,12 @@ export default async function DashboardPage() {
         accounts={accounts}
         transactions={transactions || []}
       />
+
+      {/* ── Financial Forecast Engine ── */}
+      <ForecastSection />
+
+      {/* ── AI Financial Reports ── */}
+      <ReportsSection />
 
       {/* ── Accounts Section ── */}
       <div>

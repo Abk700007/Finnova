@@ -1,9 +1,8 @@
-import DashboardPage from "./page";
 import { BarLoader } from "react-spinners";
 import { Suspense } from "react";
 import { TrendingUp } from "lucide-react";
 
-export default function Layout() {
+export default function Layout({ children }) {
   return (
     <div className="min-h-screen pt-20 pb-12">
       {/* Page header */}
@@ -37,7 +36,7 @@ export default function Layout() {
             </div>
           }
         >
-          <DashboardPage />
+          {children}
         </Suspense>
       </div>
     </div>

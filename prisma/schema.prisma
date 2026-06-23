@@ -17,6 +17,8 @@ model User {
   transactions  Transaction[]
   accounts      Account[]
   budgets       Budget[]
+  forecasts     Forecast[]
+  reports       Report[]
   createdAt     DateTime      @default(now())
   updatedAt     DateTime      @updatedAt
 
@@ -99,4 +101,48 @@ enum RecurringInterval {
   WEEKLY
   MONTHLY
   YEARLY
+}
+
+model Forecast {
+  id                  String   @id @default(uuid())
+  userId              String
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  forecastDate        DateTime @default(now())
+  monthlyIncome       Decimal
+  monthlyExpense      Decimal
+  projectedSavings3M  Decimal
+  projectedSavings6M  Decimal
+  projectedSavings12M Decimal
+  projectedExpenses3M Decimal
+  projectedExpenses6M Decimal
+  projectedExpenses12M Decimal
+  projectedNetWorth3M Decimal
+  projectedNetWorth6M Decimal
+  projectedNetWorth12M Decimal
+  confidence          Float
+  explanation         String
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@index([userId])
+  @@map("forecasts")
+}
+
+model Report {
+  id         String     @id @default(uuid())
+  userId     String
+  user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name       String
+  type       ReportType
+  pdfData    String     // Base64 encoded PDF binary data
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+
+  @@index([userId])
+  @@map("reports")
+}
+
+enum ReportType {
+  WEEKLY
+  MONTHLY
 }
