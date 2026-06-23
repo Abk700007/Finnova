@@ -324,7 +324,7 @@ export function TransactionTable({ transactions }) {
                       ) : (
                         <ArrowUpRight className="h-3.5 w-3.5" />
                       )}
-                      ${transaction.amount.toFixed(2)}
+                      ₹{transaction.amount.toFixed(2)}
                     </div>
                   </td>
                   <td>

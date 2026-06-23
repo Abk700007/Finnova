@@ -141,16 +141,16 @@ export function ForecastSection() {
               <div className="space-y-2.5">
                 <div>
                   <p className="text-[10px] text-muted-foreground uppercase tracking-wider">Projected Savings</p>
-                  <p className="text-xl font-bold text-violet-400">${forecast.projectedSavings3M.toLocaleString()}</p>
+                  <p className="text-xl font-bold text-violet-400">₹{forecast.projectedSavings3M.toLocaleString()}</p>
                 </div>
                 <div className="grid grid-cols-2 gap-2 pt-2 border-t border-white/[0.04]">
                   <div>
                     <p className="text-[9px] text-muted-foreground">Expenses</p>
-                    <p className="text-xs font-semibold">${forecast.projectedExpenses3M.toLocaleString()}</p>
+                    <p className="text-xs font-semibold">₹{forecast.projectedExpenses3M.toLocaleString()}</p>
                   </div>
                   <div>
                     <p className="text-[9px] text-muted-foreground">Net Worth</p>
-                    <p className="text-xs font-semibold text-emerald-400">${forecast.projectedNetWorth3M.toLocaleString()}</p>
+                    <p className="text-xs font-semibold text-emerald-400">₹{forecast.projectedNetWorth3M.toLocaleString()}</p>
                   </div>
                 </div>
               </div>
@@ -166,16 +166,16 @@ export function ForecastSection() {
               <div className="space-y-2.5">
                 <div>
                   <p className="text-[10px] text-muted-foreground uppercase tracking-wider">Projected Savings</p>
-                  <p className="text-xl font-bold text-blue-400">${forecast.projectedSavings6M.toLocaleString()}</p>
+                  <p className="text-xl font-bold text-blue-400">₹{forecast.projectedSavings6M.toLocaleString()}</p>
                 </div>
                 <div className="grid grid-cols-2 gap-2 pt-2 border-t border-white/[0.04]">
                   <div>
                     <p className="text-[9px] text-muted-foreground">Expenses</p>
-                    <p className="text-xs font-semibold">${forecast.projectedExpenses6M.toLocaleString()}</p>
+                    <p className="text-xs font-semibold">₹{forecast.projectedExpenses6M.toLocaleString()}</p>
                   </div>
                   <div>
                     <p className="text-[9px] text-muted-foreground">Net Worth</p>
-                    <p className="text-xs font-semibold text-emerald-400">${forecast.projectedNetWorth6M.toLocaleString()}</p>
+                    <p className="text-xs font-semibold text-emerald-400">₹{forecast.projectedNetWorth6M.toLocaleString()}</p>
                   </div>
                 </div>
               </div>
@@ -191,16 +191,16 @@ export function ForecastSection() {
               <div className="space-y-2.5">
                 <div>
                   <p className="text-[10px] text-muted-foreground uppercase tracking-wider">Projected Savings</p>
-                  <p className="text-xl font-bold text-emerald-400">${forecast.projectedSavings12M.toLocaleString()}</p>
+                  <p className="text-xl font-bold text-emerald-400">₹{forecast.projectedSavings12M.toLocaleString()}</p>
                 </div>
                 <div className="grid grid-cols-2 gap-2 pt-2 border-t border-white/[0.04]">
                   <div>
                     <p className="text-[9px] text-muted-foreground">Expenses</p>
-                    <p className="text-xs font-semibold">${forecast.projectedExpenses12M.toLocaleString()}</p>
+                    <p className="text-xs font-semibold">₹{forecast.projectedExpenses12M.toLocaleString()}</p>
                   </div>
                   <div>
                     <p className="text-[9px] text-muted-foreground">Net Worth</p>
-                    <p className="text-xs font-semibold text-emerald-400">${forecast.projectedNetWorth12M.toLocaleString()}</p>
+                    <p className="text-xs font-semibold text-emerald-400">₹{forecast.projectedNetWorth12M.toLocaleString()}</p>
                   </div>
                 </div>
               </div>

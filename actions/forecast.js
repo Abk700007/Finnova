@@ -108,10 +108,10 @@ export async function generateForecast() {
     const projectedNetWorth6M = currentNetWorth + avgNetSavings * 6;
     const projectedNetWorth12M = currentNetWorth + avgNetSavings * 12;
 
-    // 5. Call Gemini 1.5 Flash for explanation and reasoning
+    // 5. Call Gemini 2.5 Flash for explanation and reasoning
     let explanation = "";
     try {
-      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
       const prompt = `
         You are Finnova's AI Financial Copilot. Analyze the following financial data for the user:
         - Current Net Worth: $${currentNetWorth.toFixed(2)}

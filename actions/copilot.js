@@ -104,8 +104,8 @@ Rules:
       parts: [{ text: query }],
     });
 
-    // 4. Invoke Gemini 1.5 Flash
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    // 4. Invoke Gemini 2.5 Flash
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
     const result = await model.generateContent({ contents });
     const response = await result.response;
     const aiMessage = response.text();

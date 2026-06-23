@@ -59,7 +59,7 @@ export async function generateReportAction(type) {
     // 4. Generate AI Insights Narrative using Gemini
     let insights = "";
     try {
-      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
       const prompt = `
         You are Finnova's AI Financial Copilot. Generate a professional and concise executive analysis of the user's finances for the past ${type === "WEEKLY" ? "week" : "month"}.
         

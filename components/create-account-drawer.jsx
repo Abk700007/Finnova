@@ -159,7 +159,7 @@ export function CreateAccountDrawer({ children }) {
               </label>
               <div className="relative">
                 <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted-foreground font-semibold text-sm">
-                  $
+                  ₹
                 </span>
                 <Input
                   id="balance"

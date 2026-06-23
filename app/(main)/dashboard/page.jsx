@@ -49,21 +49,21 @@ export default async function DashboardPage() {
   const summaryCards = [
     {
       label: "Total Balance",
-      value: `$${totalBalance.toFixed(2)}`,
+      value: `₹${totalBalance.toFixed(2)}`,
       icon: <Wallet className="w-5 h-5" />,
       iconClass: "icon-box-primary",
       change: null,
     },
     {
       label: "Monthly Income",
-      value: `$${monthlyIncome.toFixed(2)}`,
+      value: `₹${monthlyIncome.toFixed(2)}`,
       icon: <TrendingUp className="w-5 h-5" />,
       iconClass: "icon-box-success",
       change: "+income",
     },
     {
       label: "Monthly Expenses",
-      value: `$${monthlyExpense.toFixed(2)}`,
+      value: `₹${monthlyExpense.toFixed(2)}`,
       icon: <TrendingDown className="w-5 h-5" />,
       iconClass: "icon-box-danger",
       change: "-expense",

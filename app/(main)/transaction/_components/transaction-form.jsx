@@ -190,7 +190,7 @@ export function AddTransactionForm({
               <FieldLabel icon={DollarSign} label="Amount" required />
               <div className="relative">
                 <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted-foreground font-semibold text-sm">
-                  $
+                  ₹
                 </span>
                 <Input
                   type="number"
@@ -215,7 +215,7 @@ export function AddTransactionForm({
                 <SelectContent className="bg-[#0f1628] border-white/[0.08] rounded-xl">
                   {accounts.map((account) => (
                     <SelectItem key={account.id} value={account.id} className="text-sm">
-                      {account.name} (${parseFloat(account.balance).toFixed(2)})
+                      {account.name} (₹{parseFloat(account.balance).toFixed(2)})
                     </SelectItem>
                   ))}
                   <CreateAccountDrawer>

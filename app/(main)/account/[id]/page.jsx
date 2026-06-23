@@ -54,7 +54,7 @@ export default async function AccountPage({ params }) {
                 Current Balance
               </p>
               <p className="text-3xl font-extrabold tracking-tight tabular-nums text-foreground">
-                ${parseFloat(account.balance).toFixed(2)}
+                ₹{parseFloat(account.balance).toFixed(2)}
               </p>
             </div>
           </div>
@@ -64,13 +64,13 @@ export default async function AccountPage({ params }) {
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
               <ArrowUpRight className="w-3.5 h-3.5 text-emerald-400" />
               <span className="text-xs font-semibold text-emerald-400 tabular-nums">
-                +${totalIncome.toFixed(2)} income
+                +₹{totalIncome.toFixed(2)} income
               </span>
             </div>
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/20">
               <ArrowDownRight className="w-3.5 h-3.5 text-rose-400" />
               <span className="text-xs font-semibold text-rose-400 tabular-nums">
-                -${totalExpense.toFixed(2)} expenses
+                -₹{totalExpense.toFixed(2)} expenses
               </span>
             </div>
             <div
@@ -85,7 +85,7 @@ export default async function AccountPage({ params }) {
                   netFlow >= 0 ? "text-violet-400" : "text-rose-400"
                 }`}
               >
-                {netFlow >= 0 ? "+" : ""}${netFlow.toFixed(2)} net
+                {netFlow >= 0 ? "+" : ""}₹{netFlow.toFixed(2)} net
               </span>
             </div>
           </div>

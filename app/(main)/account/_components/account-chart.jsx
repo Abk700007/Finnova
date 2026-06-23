@@ -44,7 +44,7 @@ const CustomTooltip = ({ active, payload, label }) => {
               <span className="text-muted-foreground capitalize">{p.name}</span>
             </div>
             <span className="font-bold text-foreground tabular-nums">
-              ${p.value.toFixed(2)}
+              ₹{p.value.toFixed(2)}
             </span>
           </div>
         ))}
@@ -129,7 +129,7 @@ export function AccountChart({ transactions }) {
             <span className="text-xs text-muted-foreground">Income</span>
           </div>
           <p className="text-base font-bold text-emerald-400 tabular-nums">
-            ${totals.income.toFixed(2)}
+            ₹{totals.income.toFixed(2)}
           </p>
         </div>
         <div className="px-5 py-3">
@@ -138,7 +138,7 @@ export function AccountChart({ transactions }) {
             <span className="text-xs text-muted-foreground">Expenses</span>
           </div>
           <p className="text-base font-bold text-rose-400 tabular-nums">
-            ${totals.expense.toFixed(2)}
+            ₹{totals.expense.toFixed(2)}
           </p>
         </div>
         <div className="px-5 py-3">
@@ -151,7 +151,7 @@ export function AccountChart({ transactions }) {
               net >= 0 ? "text-violet-400" : "text-rose-400"
             }`}
           >
-            {net >= 0 ? "+" : ""}${net.toFixed(2)}
+            {net >= 0 ? "+" : ""}₹{net.toFixed(2)}
           </p>
         </div>
       </div>
@@ -182,7 +182,7 @@ export function AccountChart({ transactions }) {
                 fontSize={11}
                 tickLine={false}
                 axisLine={false}
-                tickFormatter={(value) => `$${value}`}
+                tickFormatter={(value) => `₹${value}`}
                 tick={{ fill: "hsl(215 16% 57%)" }}
               />
               <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(255,255,255,0.03)", radius: 6 }} />

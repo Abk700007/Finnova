@@ -36,7 +36,7 @@ const CustomTooltip = ({ active, payload }) => {
       <div className="glass-card rounded-xl px-4 py-3 text-sm shadow-xl border border-white/[0.08]">
         <p className="font-semibold text-foreground mb-1">{payload[0].name}</p>
         <p className="text-violet-300 font-bold">
-          ${payload[0].value.toFixed(2)}
+          ₹{payload[0].value.toFixed(2)}
         </p>
       </div>
     );
@@ -171,7 +171,7 @@ export function DashboardOverview({ accounts, transactions }) {
                       : "text-emerald-400"
                   )}
                 >
-                  {transaction.type === "EXPENSE" ? "-" : "+"}$
+                  {transaction.type === "EXPENSE" ? "-" : "+"}₹
                   {transaction.amount.toFixed(2)}
                 </div>
               </div>

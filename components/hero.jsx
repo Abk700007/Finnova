@@ -112,7 +112,7 @@ const HeroSection = () => {
                 </div>
                 <span className="text-xs font-semibold text-muted-foreground">Net Worth</span>
               </div>
-              <div className="text-xl font-bold text-foreground">$124,850</div>
+              <div className="text-xl font-bold text-foreground">₹124,850</div>
               <div className="text-xs text-emerald-400 font-semibold mt-0.5">↑ +12.4% this month</div>
             </div>
           </div>
@@ -148,9 +148,9 @@ const HeroSection = () => {
                 {/* Stat cards row */}
                 <div className="grid grid-cols-4 gap-3">
                   {[
-                    { label: "Total Balance", value: "$48,294", change: "+8.2%", color: "text-emerald-400" },
-                    { label: "Monthly Income", value: "$6,800", change: "+2.1%", color: "text-emerald-400" },
-                    { label: "Expenses", value: "$4,232", change: "-3.4%", color: "text-rose-400" },
+                    { label: "Total Balance", value: "₹48,294", change: "+8.2%", color: "text-emerald-400" },
+                    { label: "Monthly Income", value: "₹6,800", change: "+2.1%", color: "text-emerald-400" },
+                    { label: "Expenses", value: "₹4,232", change: "-3.4%", color: "text-rose-400" },
                     { label: "Savings Rate", value: "37.8%", change: "+5%", color: "text-violet-400" },
                   ].map((stat, i) => (
                     <div key={i} className="rounded-xl border border-white/[0.06] bg-white/[0.03] p-3">
@@ -174,9 +174,9 @@ const HeroSection = () => {
                 {/* Transaction list mock */}
                 <div className="space-y-2">
                   {[
-                    { icon: "🛍️", name: "Shopping", cat: "Retail", amount: "-$128.50", color: "text-rose-400" },
-                    { icon: "💼", name: "Salary Deposit", cat: "Income", amount: "+$3,400.00", color: "text-emerald-400" },
-                    { icon: "🍕", name: "Dining Out", cat: "Food", amount: "-$45.20", color: "text-rose-400" },
+                    { icon: "🛍️", name: "Shopping", cat: "Retail", amount: "-₹128.50", color: "text-rose-400" },
+                    { icon: "💼", name: "Salary Deposit", cat: "Income", amount: "+₹3,400.00", color: "text-emerald-400" },
+                    { icon: "🍕", name: "Dining Out", cat: "Food", amount: "-₹45.20", color: "text-rose-400" },
                   ].map((tx, i) => (
                     <div key={i} className="flex items-center justify-between rounded-lg bg-white/[0.02] px-3 py-2">
                       <div className="flex items-center gap-2.5">

@@ -142,9 +142,9 @@ export default function SimulatorPage() {
                     <div className="flex justify-between items-center text-xs">
                       <span className="font-semibold capitalize text-slate-300">{cat}</span>
                       <span className="text-muted-foreground font-medium">
-                        Avg: ${Math.round(amount)}/mo →{" "}
+                        Avg: ₹{Math.round(amount)}/mo →{" "}
                         <span className="text-violet-400 font-bold">
-                          -${Math.round(amount * ((reductions[cat] || 0) / 100))}/mo
+                          -₹{Math.round(amount * ((reductions[cat] || 0) / 100))}/mo
                         </span>
                       </span>
                     </div>
@@ -207,7 +207,7 @@ export default function SimulatorPage() {
                       </label>
                     </div>
                     <span className="text-xs font-bold text-violet-400">
-                      -${Math.round(sub.monthlyEquivalent)}/mo
+                      -₹{Math.round(sub.monthlyEquivalent)}/mo
                     </span>
                   </div>
                 ))
@@ -228,7 +228,7 @@ export default function SimulatorPage() {
             </CardHeader>
             <CardContent>
               <div className="relative">
-                <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-slate-400 font-bold">$</span>
+                <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-slate-400 font-bold">₹</span>
                 <Input
                   type="number"
                   placeholder="0.00"
@@ -278,14 +278,14 @@ export default function SimulatorPage() {
                 <Card className="border-white/[0.05] bg-slate-950/60 p-4">
                   <p className="text-[10px] text-muted-foreground uppercase tracking-wider font-semibold">Monthly Impact</p>
                   <p className="text-2xl font-black text-violet-400 mt-1.5">
-                    +${Math.round(results.monthlySavingsDifference).toLocaleString()}
+                    +₹{Math.round(results.monthlySavingsDifference).toLocaleString()}
                   </p>
                   <p className="text-[10px] text-muted-foreground mt-1">Extra cash saved per month</p>
                 </Card>
                 <Card className="border-white/[0.05] bg-slate-950/60 p-4">
                   <p className="text-[10px] text-muted-foreground uppercase tracking-wider font-semibold">Yearly Impact</p>
                   <p className="text-2xl font-black text-emerald-400 mt-1.5">
-                    +${Math.round(results.yearlySavingsDifference).toLocaleString()}
+                    +₹{Math.round(results.yearlySavingsDifference).toLocaleString()}
                   </p>
                   <p className="text-[10px] text-muted-foreground mt-1">Simulated annual accumulation</p>
                 </Card>
